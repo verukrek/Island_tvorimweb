@@ -1,0 +1,238 @@
+*, ::after, ::before { box-sizing: border-box; }
+body{
+    background-color: #f5f5f5;
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    font-size: 13px;
+    margin: 0 auto;   
+    line-height: 20px;
+}
+h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    margin: 0;
+}
+h2{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500; 
+    padding-left: 1rem;
+}
+header{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+    url('images/island-hlavicka.jpg');
+    background-position: center;
+    background-size: cover;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+.podpis{
+    color: rgba(240, 236, 236, 0.8);
+    font-style: italic;
+    margin: 0;
+}
+.podpis::before{
+    content: "_______";
+    display: block;
+    margin: 0.8rem;
+}
+ul {
+    padding-inline-start: 0;
+}
+.obsah li{
+    display: block;
+    text-align: center;
+    list-style-type: none;
+    text-transform: uppercase;
+    color: rgb(202, 204, 204);
+    margin: 0.5rem;
+    padding-bottom: 0.5rem;;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-bottom: rgb(202, 204, 204) solid 1px;
+}
+.obsah a:visited{
+    color: rgb(202, 204, 204);
+}
+.obsah a{
+     text-decoration: none;
+}
+.obsah a:link{
+    color:rgb(202, 204, 204);
+}
+.cara{
+    border: #629edb 2.5px solid;
+    width: 10%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.text{
+    padding: 1rem;
+    padding-top: 0;
+}
+img {
+    width: 100%;
+}
+.popisky,
+.popisky figcaption,
+.popisky a{
+    color: rgb(126, 126, 126);
+    text-align: center;
+}
+figure{
+    margin: 0;
+    padding-bottom: 1rem;
+}
+.foot a,
+.foot{
+    color: rgb(126, 126, 126);
+}
+footer{
+    background: rgb(234,234,240);
+    background: linear-gradient(0deg, rgba(234,234,240,0.3589743589743589) 87%, rgba(99,101,101,0.7435897435897436) 100%);
+    background-color: rgb(202, 204, 204);
+    padding: 1rem;
+}
+/*VERZE M*/
+@media (min-width: 765px) {
+    .obsah ul{
+        display: flex;
+        justify-content: center;
+    }
+    .obsah li{
+        flex: 1;
+        border: rgb(202, 204, 204) solid 0.8px;
+        padding-bottom: 0;
+        margin: 0;
+    }
+    .obsah{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .obsah .uvo {
+        border-left: none;
+    }
+    .obsah .fot{
+        border-right: none;
+    }
+    .velka{
+        position: relative;
+    }
+    .hlavni{
+        position: absolute;
+        font-size: 10px;
+        font-style: italic;
+        bottom: 10px;
+        right: 10px;
+        color: cornsilk;
+    }
+    .hlavni a{
+        color: cornsilk;
+    }
+    h2{
+        padding-top: 1rem;
+    }
+    .galerie{
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 0;
+    }
+    .img{
+        position: relative;
+        overflow: hidden;
+        width: 50%;
+        padding-bottom: 0;
+        
+    }
+    .img img{ 
+        transition: transform 0.3s ease-in;
+    }
+    .img:hover img{
+        transform: scale(1.2);
+    }
+    .img figcaption{
+        opacity:0;
+        position: absolute;
+        background-color: rgb(50,50,50,0.7);
+        width: 100%;
+        transition: transform 0.3s ease-in;
+        transform: translateY(100%);
+        bottom: 0;
+        overflow: hidden;
+        line-height: 2.2;
+    }
+    .img figcaption,
+    .img span,
+    .img a {
+        color: cornsilk;   
+    }
+    .img:hover figcaption{
+        opacity: 1;
+        background-color: rgb(50,50,50,0.7);
+        height:30%;
+        transform: translateY(0);
+    }
+}
+    /*VERZE L*/
+@media (min-width: 1025px) {
+    header{
+        padding: 2rem 10rem 2rem 10rem;
+        height: 330px;
+    }
+    h1{
+        font-size: 40px;
+    }
+    header p,
+    .podpis {
+        padding-top: 1.5rem;
+        max-width: 960px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .celek{
+        background-color:#f5f5f5;
+        max-width: 960px;
+        margin: 0 auto;
+        position: relative;
+        top: -57px;
+        box-shadow: rgb(145, 143, 143) 1px 1px 10px;
+        padding-top: 2rem;
+    }
+    .obsah{
+        display: flex;
+        margin: 0;
+        padding-left: 1.5rem;
+    }
+    .obsah a:hover{
+        color: #629edb;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        height: 90px;
+        margin-top: 2.2rem;
+    }
+    .section-wrapper{
+        display: flex;
+    }
+    .obsah li{
+        text-align: left;
+        width: 9rem;
+        border: none;
+        border-bottom: rgb(202, 204, 204) solid 0.8px;   
+        padding-bottom: 0.5rem; 
+        padding-top: 0.5rem;    
+    }
+    .section-inner{
+        width: 70%;   
+    }
+    .section-inner-two{
+        padding-left: 15rem;
+    }
+    .img{
+        width: calc(100%/3);   
+        display: block; 
+    }
+}
